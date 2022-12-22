@@ -1,9 +1,9 @@
 // // SETUP
 // @import 'setup/typography';
-// @import 'setup/variables';
+@import 'setup/variables';
 
 // // BASICS
-// @import 'basics/helpers';
+@import 'basics/helpers';
 @import 'basics/base';
 // @import 'basics/layout';
 
@@ -16,10 +16,12 @@
 // @import 'cmps/actions';
 
 @import 'cmps/header';
+@import 'cmps/starter';
 @import 'cmps/chart';
 @import 'cmps/addDay';
 @import 'cmps/motivation';
 @import 'cmps/intro';
+
 
 
 

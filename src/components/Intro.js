@@ -6,7 +6,7 @@ import { MultiStepForm } from "./multi_step_form/MultiStepForm.js";
 import { questions } from "./multi_step_form/Questions";
 
 
-const Intro = ({submitUserData}) => {
+const Intro = ({submitUserData,getUserData}) => {
   const [index, setIndex] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const totalPagesCount = questions?.length || 0;
@@ -25,11 +25,13 @@ const Intro = ({submitUserData}) => {
 
   const nextButton = () => {
     if (index - 4) {
+      getUserData(pagesAnswers)
       setIndex(prevIndex => prevIndex + 1);
     } else {
       // clear the form on submit
       submitUserData(pagesAnswers);
       setSubmitted(true);
+      getUserData(pagesAnswers)
     }
   }
 

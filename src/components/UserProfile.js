@@ -6,16 +6,18 @@ const UserProfile = ({userData,days}) => {
   const [goalDays, setGoalDays] = useState(null)
 
   // const test={
-  //   userName: 'test',
-  //   affirm: 'affirm',
-  //   currWeight: '70',
-  //   goalWeight: '65',
+  //   1:{index: 1, userName: 'Alex'},
+  //   2:{index: 2, currWeight: '70', goalWeight: '65'},
+  //   3:{index: 3, affirm: 'Be healthy and fit'}
   // }
 
+
+
   useEffect(() => {
+    
     console.log('userData in profile:', userData)
     const goal = userData[2].goalWeight
-    const curr = days[days.length-1].weight
+    const curr = days.length ? days[days.length-1].weight : userData[2].currWeight;
     const daysToGoal = ((curr - goal) / 0.2).toFixed(0)
     console.log('daysToGoal:', daysToGoal)
     setGoalDays(daysToGoal)
@@ -27,10 +29,10 @@ const UserProfile = ({userData,days}) => {
   return (
     <div>
       <h1>UserProfile</h1>
-      <p>Hello {userData[1].userName}! </p>
-      <p>Remember your goal is to {userData[3].affirm} </p>
-      <p>Days until you reach your goal: {goalDays} </p>
-      <p>Keep it going {userData[1].userName} you got it!</p>
+      <h4>Hello {userData[1].userName}! </h4>
+      <h4>Remember your goal is to {userData[3].affirm} </h4>
+      <h4>Days until you reach your goal: {goalDays} </h4>
+      <h4>Keep it going {userData[1].userName} you got it!</h4>
       <p></p>
     </div>
   )

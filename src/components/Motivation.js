@@ -5,9 +5,11 @@ const Motivation = () => {
 
    
     const [quote, setQuote] = useState('You are the best')
+    const [author, setAuthor] = useState('me')
+    
 
     // useEffect(()=>{
-    //     fetch('https://api.api-ninjas.com/v1/quotes?category=happiness',{
+    //     fetch('https://api.api-ninjas.com/v1/chucknorris',{
     //         method: 'GET',
     //         headers: {
     //         'Content-type': 'application/json',
@@ -15,14 +17,19 @@ const Motivation = () => {
     //         }
     //     })
     //     .then( (res)=> res.json())
-    //     .then( (res)=> setQuote(res[0].quote))
+    //     .then( (res)=> {
+    //       console.log('res:', res)
+    //       setQuote(res.joke)
+    //       setAuthor(res[0].author)})
     //     .catch( err => console.log(err) )
     // },[])
   
 
   return (
-    <div>
-      <h2 style={{background:'grey'}} >Motivation: {quote}</h2>
+    <div style={{background:'grey'}}>
+      <h2 >Motivation: {quote} </h2>
+      {/* <h2 > {quote} </h2> */}
+      {/* <h3>by {author}</h3> */}
     </div>
   )
 }

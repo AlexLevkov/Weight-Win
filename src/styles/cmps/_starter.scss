@@ -1,0 +1,85 @@
+.main-box{
+  align-items: flex-end;
+}
+
+.land-box-txt{
+  background-color: $clr2;
+  padding: 5%;
+  padding-top: 10%;
+  h1{
+     font-size: 4.5rem;
+     &:first-child{
+     margin-bottom: -16px;
+     }
+     span{
+      color: $clr1;
+     }
+  }
+  p{
+    margin-top: 20px!important;
+    font-size: 1.2rem!important;
+    width: 20vw;
+    span{
+      font-weight: bold;
+    }
+  }
+  .starter-btns-container{
+    margin-top: 24px;
+    justify-content: left;
+  }
+  button{
+    border: 2px solid $clr1;
+    width: 130px;
+    &:first-child{ //watch demo
+      color: white;
+      background-color: $clr1;
+    }; //lets start
+    &:nth-child(2){
+      background-color: transparent;
+      color: $clr1;
+      &:hover{
+        background-color:  $clr1;
+        color: white;
+      }
+    };
+
+    &:hover{
+      transform: scale(1.05);
+      border: 2px solid $clr1;
+      // width: 20%;
+      // border: 4px solid $clr1;
+    }
+   
+  }
+}
+
+
+.land-box-img {
+  height: 90vh!important;
+}
+
+
+
+  
+
+@media (max-width: 768px) {
+  .land-box-txt {
+      height: 35vh!important;
+    h1{
+      font-size: 3rem!important;
+    }
+    p{
+      width: auto;
+      font-size: 1rem!important;;
+    }
+    .starter-btns-container{
+      justify-content: center;
+    }
+  }
+  .land-box-img {
+    height: 65vh!important;
+    margin-top: 0!important;
+  }
+
+}
+// 576px
