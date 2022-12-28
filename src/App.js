@@ -4,14 +4,15 @@ import { useState , useEffect } from 'react'
 import service from './services/storage-service'
 import Header from './components/Header'
 import Motivation from './components/Motivation';
-import AddDay from './components/AddDay';
+import AddDay from './components/AddDayForm';
 import ProfileOptions from './components/ProfileOptions.js';
 import Chart from './components/Chart';
 import Intro from './components/Intro';
 import UserProfile from './components/UserProfile'
 import Starter from './components/Starter'
-import arrayToCSV from './functions/arrayToCSV'
 import Test from './components/Test'
+import Blog from './components/Blog'
+import Contact from './components/Contact'
 
 function App() {
   
@@ -47,6 +48,7 @@ function App() {
     //     setUserData(data)
     //     setIsIntro(false)
     //   }}, 1000);
+    
 
  }, []);
 
@@ -80,12 +82,13 @@ function App() {
     setIsIntro(false)
   }
 
-
+  
+  // user has pressed start demo
   const startDemo = () => {
     console.log('start demo')
 
     const demoUserData={
-      1:{index: 1, userName: 'Alex'},
+      1:{index: 1, userName: 'Alex (Demo Version)'},
       2:{index: 2, currWeight: '70', goalWeight: '65'},
       3:{index: 3, affirm: 'be healthy and fit'}
     }
@@ -102,28 +105,43 @@ function App() {
 
   // Activated after "Start wining" button is clicked
   const startIntro = () => {
-    console.log('start intro')
     setIsStart(false)
   }
 
   return (
     <Router>
       <Header />
-      {isStart && <Starter onStartDemo={startDemo} onStartIntro={startIntro}/>}
+      {/* <Test/> */}
+      <Switch>
+        <Route exact path='/'>
+          {isStart && <Starter onStartDemo={startDemo} onStartIntro={startIntro}/>}
+          {!isStart && isIntro && <Intro submitUserData={submitUserData} getUserData={getUserData}/>}
+          {!isIntro && <UserProfile  days={days} userData={userData} addData={addData}/> }
+          {!isIntro && <Chart days={days}/>}
+        </Route>
+        <Route path='/blog'>
+          <Blog/>
+        </Route>
+        <Route path='/contact'>
+          <Contact/>
+        </Route>
+      </Switch>
     </Router>
-    
   );
 }
 
 export default App;
 
-{/* <Test arrayToCSV={arrayToCSV}/> */}
+      {/* <Test arrayToCSV={arrayToCSV}/> */}
 
 
 // {/* <div className=''>
 // <Header />
 // {/* <Test arrayToCSV={arrayToCSV}/> */}
 
+      // {/* {!isIntro && <Motivation/>} */}
+      // {/* <AddDay days={days} onAdd={addData}/> */}
+      // {/* <ProfileOptions/> */}
 
 
 // {!isStart && isIntro && <Intro submitUserData={submitUserData} getUserData={getUserData}/>}
@@ -131,13 +149,12 @@ export default App;
 //   CLEAR
 // </button> */}
 
-// {!isIntro && <UserProfile  days={days} userData={userData}/>}
+
 // {!isIntro && 
 // <div className="d-flex gap-2">
-//   <AddDay days={days} onAdd={addData}/>
-//   <ProfileOptions/>
+  
 // </div>}
-// {!isIntro && <Motivation/>}
-// {!isIntro && <Chart days={days}/>}
+
+
 // {/* {days && <div>{days.map((task, index) => (<h1 key={index} >{task.weight}</h1>))}</div>} */}
 // </div> */}

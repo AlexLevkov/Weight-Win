@@ -1,8 +1,21 @@
-
+.chart-cmp{
+  display: flex;
+}
 
 
 .recharts-surface{
-  background: linear-gradient(360deg, indigo, #a222ff);
-  border: 10px #3d008b solid;
+  background: linear-gradient(360deg, $clr1, indigo);
+  border: 3px $clr2 solid;
   border-radius: 20px;
+}
+
+@media (max-width: 768px){
+  .chart-cmp{
+    // display: none
+  }
+  
+}
+
+.line-chart{
+  width: 1000px;
 }

@@ -4,8 +4,7 @@
 
 .land-box-txt{
   background-color: $clr2;
-  padding: 5%;
-  padding-top: 10%;
+  padding: 5% 5% 0 5%;
   h1{
      font-size: 4.5rem;
      &:first-child{
@@ -38,8 +37,7 @@
       background-color: transparent;
       color: $clr1;
       &:hover{
-        background-color:  $clr1;
-        color: white;
+        //
       }
     };
 
@@ -55,6 +53,10 @@
 
 
 .land-box-img {
+  position: absolute;
+  z-index: -1;
+  right: 0%;
+  bottom: 0%;
   height: 90vh!important;
 }
 
@@ -64,7 +66,8 @@
 
 @media (max-width: 768px) {
   .land-box-txt {
-      height: 35vh!important;
+      height: 25vh!important;
+      padding-top: 3%;
     h1{
       font-size: 3rem!important;
     }

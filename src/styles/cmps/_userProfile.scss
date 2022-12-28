@@ -1,0 +1,40 @@
+.user-profile-cmp{
+  // margin: auto;
+  // width: 50%;
+  text-align: center;
+}
+
+.profile-box-container{
+  margin: auto;
+  width: 70vw;
+}
+
+.profile-box{
+  width: 100%;
+  height: 20vh;
+  padding: 10px;
+  border: 2px $clr1 solid;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
+  -webkit-box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
+  -moz-box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
+}
+
+.days-to-goal{
+  font-size: 3rem;
+}
+
+.btn-user{
+  background-color: $clr1;
+  border: none !important;
+  color: white;
+  width: 190px;
+  font-size: larger;
+  padding: 10px;
+
+  &:hover{
+    background-color: $clr1;
+    color: white;
+    transform: scale(1.05);
+  }
+}

@@ -14,7 +14,6 @@ const Intro = ({submitUserData,getUserData}) => {
   const [pagesAnswers, setPagesAnswers] = useState({});
 
   useEffect(() => {
-    // console.log('pagesAnswers:', pagesAnswers)
   },[pagesAnswers])
 
   const prevButton = () => {

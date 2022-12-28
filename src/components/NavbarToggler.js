@@ -4,29 +4,32 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from "react-router-dom";
 
-function Test() {
+function NavbarToggler() {
   return (
-    <div>
+    <div className='d-block d-md-none'>
       {[false].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-          <Container fluid>
+        <Navbar key={expand} bg="light" expand={expand} className="p-0">
+          <div>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              style={{width:'30%'}}
             >
-              <Offcanvas.Header closeButton>
+              {/* <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   Offcanvas
                 </Offcanvas.Title>
-              </Offcanvas.Header>
+              </Offcanvas.Header> */}
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
-                  <NavDropdown
+                <Nav className="justify-content-end flex-grow-1">
+                  <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="blog">Blog</Nav.Link>
+                  <Nav.Link href="contact">Contact</Nav.Link>
+                  {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -38,18 +41,18 @@ function Test() {
                     <NavDropdown.Item href="#action5">
                       Something else here
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-          </Container>
+          </div>
         </Navbar>
       ))}
     </div>
   );
 }
 
-export default Test
+export default NavbarToggler
 
 
 
