@@ -26,19 +26,19 @@ function NavbarToggler() {
               </Offcanvas.Header> */}
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="blog">Blog</Nav.Link>
-                  <Nav.Link href="contact">Contact</Nav.Link>
+                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="/"><i class="fa-solid fa-house"></i> Home</Link>
+                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="blog"><i class="fa-solid fa-book-open"></i> Blog</Link>
+                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="contact"><i class="fa-regular fa-id-card"></i> Contact</Link>
                   {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item to="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item to="#action4">
                       Another action
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item to="#action5">
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown> */}

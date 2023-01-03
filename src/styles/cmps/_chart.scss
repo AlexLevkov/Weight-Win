@@ -1,13 +1,21 @@
 .chart-cmp{
   display: flex;
+  z-index: 10;
 }
-
 
 .recharts-surface{
-  background: linear-gradient(360deg, $clr1, indigo);
-  border: 3px $clr2 solid;
+  border: 1.5px $clr1 solid;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
+  -moz-box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
   border-radius: 20px;
 }
+
+.line-chart{
+  width: 1000px;
+}
+
+
 
 @media (max-width: 768px){
   .chart-cmp{
@@ -16,6 +24,3 @@
   
 }
 
-.line-chart{
-  width: 1000px;
-}

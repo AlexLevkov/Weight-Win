@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { useState , useEffect } from 'react'
 import { MultiStepProgressBar } from "./multi_step_form/MultiStepProgressBar.js";
 import { MultiStepForm } from "./multi_step_form/MultiStepForm.js";
@@ -12,8 +13,10 @@ const Intro = ({submitUserData,getUserData}) => {
   const totalPagesCount = questions?.length || 0;
   // numbered by pages. for exampe { 1: [{"key" : "value"}], 2:["key": "value"], 3: []}
   const [pagesAnswers, setPagesAnswers] = useState({});
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
+    
   },[pagesAnswers])
 
   const prevButton = () => {
@@ -28,9 +31,16 @@ const Intro = ({submitUserData,getUserData}) => {
       setIndex(prevIndex => prevIndex + 1);
     } else {
       // clear the form on submit
-      submitUserData(pagesAnswers);
-      setSubmitted(true);
-      getUserData(pagesAnswers)
+      if (!pagesAnswers[1] || !pagesAnswers[2] || !pagesAnswers[3] ){
+        setToggle(!toggle)
+      }
+      else{
+     
+        submitUserData(pagesAnswers);
+        setSubmitted(true);
+        getUserData(pagesAnswers)
+      }
+
     }
   }
 
@@ -44,7 +54,7 @@ const Intro = ({submitUserData,getUserData}) => {
   }
 
   return (
-    <div className="App container w-50 ">
+    <div className="App intro-container ">
       <Container className="h-100 align-items-center">
         <Row className="m-5">
           <Col className="">
@@ -55,7 +65,7 @@ const Intro = ({submitUserData,getUserData}) => {
         </Row>
         <Row className='d-flex justify-content-center'>
         { submitted ?
-            <Card className='w-50'>
+            <Card className='intro-card'>
               <Card.Body>
                 <p>Your answers have been submitted!</p>
               </Card.Body>
@@ -64,7 +74,7 @@ const Intro = ({submitUserData,getUserData}) => {
               </Card.Footer>
             </Card>
              :
-            <Card className='w-50'>
+            <Card className='intro-card'>
               <Card.Body>
                 <MultiStepForm
                   list={questions}
@@ -81,6 +91,20 @@ const Intro = ({submitUserData,getUserData}) => {
         }
         </Row>
       </Container>
+
+
+      <Modal isOpen={toggle} toggle={()=>{}}>
+          <ModalHeader toggle={()=>{}}>Alert</ModalHeader>
+          <ModalBody>
+            Please make sure you fill all the required fields.
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" onClick={()=>{setToggle(!toggle)}}>
+              Close
+            </Button>
+          </ModalFooter>
+        </Modal>
+
     </div>
   );
 }

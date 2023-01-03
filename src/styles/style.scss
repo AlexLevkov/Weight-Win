@@ -7,14 +7,6 @@
 @import 'basics/base';
 // @import 'basics/layout';
 
-// // COMPONENTS
-// @import 'cmps/header';
-// @import 'cmps/hero';
-// @import 'cmps/products';
-// @import 'cmps/reasons';
-// @import 'cmps/footer';
-// @import 'cmps/actions';
-
 @import 'cmps/header';
 @import 'cmps/starter';
 @import 'cmps/chart';
@@ -22,83 +14,69 @@
 @import 'cmps/motivation';
 @import 'cmps/intro';
 @import 'cmps/userProfile';
+@import 'cmps/graphCarousel';
 
 
 
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+// .App {
+//   text-align: center;
+//   height: 100vh;
+// }
 
-.App {
-  text-align: center;
-  height: 100vh;
-}
+// .App-logo {
+//   height: 40vmin;
+//   pointer-events: none;
+// }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+// .App-link {
+//   color: #61dafb;
+// }
 
-.App-link {
-  color: #61dafb;
-}
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// .text-left {
+//   text-align: left;
+// }
 
-.text-left {
-  text-align: left;
-}
 
-.step {
-  color: white;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  background-color: indigo;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.step.completed {
-  background-color: indigo;
-}
 
 
 

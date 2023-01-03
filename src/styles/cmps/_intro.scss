@@ -1,9 +1,18 @@
+
+.intro-container{
+  width: 50%;
+  margin: auto !important;
+}
+.intro-card{
+  width: 50%!important;
+}
+
 .step {
   color: white;
   width: 50px;
   height: 50px;
   font-size: 20px;
-  background-color: indigo;
+  background-color: $clr1;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -11,10 +20,24 @@
 }
 
 .step.completed {
-  background-color: indigo;
+  background-color: $clr1;
 }
 
+@media (max-width: 768px) {
 
+  .step {
+    width: 35px!important;
+    height: 35px!important;
+  }
+  .intro-card{
+    width: 100vw!important;
+  }
+  .intro-container{
+    width: 80%;
+    margin: auto !important;
+  }
+
+}
 
 
 

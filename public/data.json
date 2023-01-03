@@ -6,7 +6,7 @@
 					"water": true,
 					"weight": 70,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 2,
@@ -14,15 +14,15 @@
 					"water": true,
 					"weight": 69.8,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 3,
 					"date": "2022-01-03",
 					"water": true,
 					"weight": 69.6,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 60
 					},
 					{
 					"id": 4,
@@ -30,7 +30,7 @@
 					"water": true,
 					"weight": 69.8,
 					"affirm": true,
-					"walk": true
+					"walk": 70
 					},
 					{
 					"id": 5,
@@ -38,7 +38,7 @@
 					"water": true,
 					"weight": 69.7,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 6,
@@ -46,15 +46,15 @@
 					"water": true,
 					"weight": 69.5,
 					"affirm": true,
-					"walk": true
+					"walk": 50
 					},
 					{
 					"id": 7,
 					"date": "2022-01-07",
-					"water": true,
+					"water": false,
 					"weight": 69.5,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 8,
@@ -62,7 +62,7 @@
 					"water": true,
 					"weight": 69.6,
 					"affirm": true,
-					"walk": true
+					"walk": 50
 					},
 					{
 					"id": 9,
@@ -70,7 +70,7 @@
 					"water": true,
 					"weight": 69.4,
 					"affirm": true,
-					"walk": true
+					"walk": 0
 					},
 					{
 					"id": 10,
@@ -78,7 +78,7 @@
 					"water": true,
 					"weight": 69.3,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 11,
@@ -86,7 +86,7 @@
 					"water": true,
 					"weight": 69.3,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 12,
@@ -94,7 +94,7 @@
 					"water": true,
 					"weight": 69.2,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 13,
@@ -102,15 +102,15 @@
 					"water": true,
 					"weight": 69.3,
 					"affirm": true,
-					"walk": true
+					"walk": 70
 					},
 					{
 					"id": 13,
 					"date": "2022-01-14",
-					"water": true,
+					"water": false,
 					"weight": 69.1,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 14,
@@ -118,15 +118,15 @@
 					"water": true,
 					"weight": 69.1,
 					"affirm": true,
-					"walk": true
+					"walk": 50
 					},
 					{
 					"id": 15,
 					"date": "2022-01-16",
 					"water": true,
 					"weight": 68.8,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 60
 					},
 					{
 					"id": 16,
@@ -134,7 +134,7 @@
 					"water": true,
 					"weight": 68.9,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 17,
@@ -142,7 +142,7 @@
 					"water": true,
 					"weight": 68.7,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 18,
@@ -150,7 +150,7 @@
 					"water": true,
 					"weight": 68.8,
 					"affirm": true,
-					"walk": true
+					"walk": 0
 					},
 					{
 					"id": 19,
@@ -158,23 +158,23 @@
 					"water": true,
 					"weight": 68.7,
 					"affirm": true,
-					"walk": true
+					"walk": 70
 					},
 					{
 					"id": 20,
 					"date": "2022-01-21",
-					"water": true,
+					"water": false,
 					"weight": 68.7,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 21,
 					"date": "2022-01-22",
 					"water": true,
 					"weight": 68.8,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 0
 					},
 					{
 					"id": 22,
@@ -182,7 +182,7 @@
 					"water": true,
 					"weight": 68.6,
 					"affirm": true,
-					"walk": true
+					"walk": 70
 					},
 					{
 					"id": 23,
@@ -190,7 +190,7 @@
 					"water": true,
 					"weight": 68.5,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 24,
@@ -198,7 +198,7 @@
 					"water": true,
 					"weight": 68.4,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 25,
@@ -206,31 +206,31 @@
 					"water": true,
 					"weight": 68.6,
 					"affirm": true,
-					"walk": true
+					"walk": 0
 					},
 					{
 					"id": 26,
 					"date": "2022-01-27",
 					"water": true,
 					"weight": 68.3,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 0
 					},
 					{
 					"id": 27,
 					"date": "2022-01-28",
 					"water": true,
 					"weight": 68.2,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 50
 					},
 					{
 					"id": 28,
 					"date": "2022-01-29",
 					"water": true,
 					"weight": 68.1,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 0
 					},
 					{
 					"id": 29,
@@ -238,7 +238,7 @@
 					"water": true,
 					"weight": 68.3,
 					"affirm": true,
-					"walk": true
+					"walk": 70
 					},
 					{
 					"id": 30,
@@ -246,15 +246,15 @@
 					"water": true,
 					"weight": 68.0,
 					"affirm": true,
-					"walk": true
+					"walk": 0
 					},
 					{
 					"id": 31,
 					"date": "2022-02-01",
 					"water": true,
 					"weight": 67.9,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 60
 					},
 					{
 					"id": 32,
@@ -262,7 +262,7 @@
 					"water": true,
 					"weight": 67.8,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 33,
@@ -270,7 +270,7 @@
 					"water": true,
 					"weight": 67.7,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 34,
@@ -278,23 +278,23 @@
 					"water": true,
 					"weight": 67.5,
 					"affirm": true,
-					"walk": true
+					"walk": 0
 					},
 					{
 					"id": 35,
 					"date": "2022-02-05",
-					"water": true,
+					"water": false,
 					"weight": 67.6,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					},
 					{
 					"id": 36,
 					"date": "2022-02-06",
 					"water": true,
 					"weight": 67.5,
-					"affirm": true,
-					"walk": true
+					"affirm": false,
+					"walk": 50
 					},
 					{
 					"id": 37,
@@ -302,7 +302,7 @@
 					"water": true,
 					"weight": 67.5,
 					"affirm": true,
-					"walk": true
+					"walk": 0
 					},
 					{
 					"id": 38,
@@ -310,7 +310,7 @@
 					"water": true,
 					"weight": 67.6,
 					"affirm": true,
-					"walk": true
+					"walk": 70
 					},
 					{
 					"id": 39,
@@ -318,7 +318,7 @@
 					"water": true,
 					"weight": 67.3,
 					"affirm": true,
-					"walk": true
+					"walk": 60
 					}
     ],
     "userData":{

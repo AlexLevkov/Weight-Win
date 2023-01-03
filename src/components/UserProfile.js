@@ -8,6 +8,7 @@ import img3 from '../imgs/warming.png'
 import arrayToCSV from '../functions/arrayToCSV'
 
 
+
 const UserProfile = ({userData,days,addData}) => {
   const [goalDays, setGoalDays] = useState(null)
   const [daysToGoal, setDaysToGoal] = useState(null)

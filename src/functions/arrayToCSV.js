@@ -8,7 +8,10 @@ const arrayToCSV = (days) => {
 			day => {
         const date = makeDay(day.date)
         const weight = day.weight;
-        data.push(	{date,weight})
+        const water = day.water;
+        const affirm = day.affirm;
+        const exercise = day.walk;
+        data.push(	{date,weight,exercise,water,affirm})
 			})
   }
 
@@ -19,10 +22,10 @@ const arrayToCSV = (days) => {
 	}
 
     let dataFixArr = []
-    data.forEach(el => dataFixArr.push([el.date,el.weight]))
+    data.forEach(el => dataFixArr.push([el.date,el.weight,el.exercise,el.water,el.affirm]))
     // Convert the data array to a string with the values separated by commas
     let csv = dataFixArr.map(row => row.join(',')).join('\n');
-    csv = "date,weight\n".concat(csv)
+    csv = "date,weight,exercise,water,affirm\n".concat(csv)
     // Create a hidden element to contain the CSV file
     let hiddenElement = document.createElement('a');
     hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);

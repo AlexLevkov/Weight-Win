@@ -6,13 +6,14 @@ import Header from './components/Header'
 import Motivation from './components/Motivation';
 import AddDay from './components/AddDayForm';
 import ProfileOptions from './components/ProfileOptions.js';
-import Chart from './components/Chart';
 import Intro from './components/Intro';
 import UserProfile from './components/UserProfile'
 import Starter from './components/Starter'
 import Test from './components/Test'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
+import GraphCarousel from './components/GraphCarousel'
+import DaysChart from './components/charts/DaysChart';
 
 function App() {
   
@@ -117,7 +118,8 @@ function App() {
           {isStart && <Starter onStartDemo={startDemo} onStartIntro={startIntro}/>}
           {!isStart && isIntro && <Intro submitUserData={submitUserData} getUserData={getUserData}/>}
           {!isIntro && <UserProfile  days={days} userData={userData} addData={addData}/> }
-          {!isIntro && <Chart days={days}/>}
+          {/* {!isIntro && <Chart days={days}/>} */}
+          {!isIntro && <GraphCarousel days={days}/>}
         </Route>
         <Route path='/blog'>
           <Blog/>

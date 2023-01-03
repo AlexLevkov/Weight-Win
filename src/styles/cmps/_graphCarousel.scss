@@ -1,0 +1,26 @@
+.graph-carousel-cmp{
+  // background-color: lightgray;
+  width: 50%;
+  margin: auto;
+}
+
+.carousel-caption{
+  top: 0;
+  color:black;;
+  z-index: -10;
+}
+
+.carousel-control-next-icon,.carousel-control-prev-icon{
+  padding: 5px;
+  background-color: $clr1;
+  border-radius: 50%;
+  transform: scale(1.5);
+  opacity: 1!important;
+}
+
+
+@media (max-width:768px){
+  .graph-carousel-cmp{
+    width: 85%;
+  }
+}

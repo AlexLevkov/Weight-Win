@@ -40,7 +40,8 @@ export const questions = [
     items: [
       {
         label: `What is your motivation for getting in the right weight?
-        Please complete the following sentence, I want to... `,
+        Please complete in the following format examples:
+        be strong / be healthy / be attractive`,
         type: 'text',
         value: 'affirm'
       }

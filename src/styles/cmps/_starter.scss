@@ -68,11 +68,14 @@
   .land-box-txt {
       height: 25vh!important;
       padding-top: 3%;
+      text-align: center;
     h1{
       font-size: 3rem!important;
     }
     p{
-      width: auto;
+      margin-top: 3%;
+      width: 85%;
+      margin: auto!important;
       font-size: 1rem!important;;
     }
     .starter-btns-container{
