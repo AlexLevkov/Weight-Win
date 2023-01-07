@@ -62,7 +62,7 @@ const AddDayForm = ({addData,days,handleClose}) => {
               <input type="checkbox" className="form-check-input" id="exampleCheck2" onChange={(e) => setAffirm(e.target.checked)}/>
               <label className="form-check-label" htmlFor="exampleCheck2">I said my affirmation outloud</label>
             </div>
-            <button type="submit" className="btn btn-user my-2">Submit</button>
+            <button type="submit" className="btn btn-app my-2">Submit</button>
           </form>
           <div style={{position:'relative', bottom: '250px', left: '400px', width:'400px'}}>
           {/* <img  src={stas}  style={{width:'400px'}}/> */}

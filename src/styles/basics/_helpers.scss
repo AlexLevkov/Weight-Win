@@ -6,3 +6,32 @@
 .active{
   color: black;
 }
+
+.layout{
+  padding-inline: 5%;
+}
+
+.btn-app{
+  color: white;
+  background-color: $clr1;
+  border-color: $clr1 ;
+  &:hover{
+    background-color: $clr1;
+    opacity: 0.95;
+    color: white;
+  };
+  &:focus{
+    background-color: $clr1;
+    opacity: 0.95;
+    color: white;
+  };
+  &:active{
+    background-color: $clr1;
+    opacity: 0.95;
+    color: white;
+  };
+
+  --bs-btn-disabled-bg:#7F60F3;
+  --bs-btn-disabled-border-color:#7F60F3;
+  
+}

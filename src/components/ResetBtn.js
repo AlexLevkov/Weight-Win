@@ -17,10 +17,10 @@ const ResetBtn = () => {
 
   return (
     <>
-    <Button className='btn btn-user' onClick={()=>{handleShow()}}>
+    <div className='' onClick={()=>{handleShow()}}>
     {/* <a href="#" onClick={() => { func1(); func2();}}>Test Link</a> */}
     Reset Profile
-    </Button>
+    </div>
 
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -33,7 +33,7 @@ const ResetBtn = () => {
         <Button variant="secondary" onClick={handleClose}>
           No
         </Button>
-        <Button variant="primary" onClick={()=>{handleClose();resetProfile()}} >
+        <Button className="btn btn-app" onClick={()=>{handleClose();resetProfile()}} >
           Yes
         </Button>
       </Modal.Footer>

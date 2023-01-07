@@ -19,19 +19,15 @@ function App() {
   
   const uniqid = require('uniqid'); 
 
-  // the intro is for the creation of the user profile
+  // the intro is referenced to the data entry by the user
   const [isIntro,setIsIntro] = useState (true)
-    // the start is the beginning window with options for demo or real user
+  // the start is referenced to the landing page 
   const [isStart,setIsStart] = useState (true)
   const [isDebug, setIsDebug] = useState(false)
   const [days, setDays] = useState([])
   const [userData, setUserData] = useState(null)
 
   useEffect(() => {
-    // fetch("./data.json")
-    // .catch(err => console.log(err))
-    // .then( res=> res.json())
-    // .then( (data) => setDays(data.days))
 
     const userData = service.loadFromStorage('userData')
     const daysData = service.loadFromStorage('daysData')
@@ -42,30 +38,14 @@ function App() {
       setIsStart(false)
       setIsIntro(false)
     }
-    // console.log('data:', data)
-    
-    // setTimeout(() => {
-    //   if (data){
-    //     setUserData(data)
-    //     setIsIntro(false)
-    //   }}, 1000);
-    
-
  }, []);
-
-
- 
 
   const addData = (data) => {
     console.log('addData is on')
-    console.log('data:', data)
+    console.log('last data:', data)
     setDays(data)
-  }
+    service.saveToStorage('daysData',data)
 
-  const getUserData = (data) => {
-    // console.log('data:', data)
-    // setUserData(data)
-    // service.saveToStorage('userData',data)
   }
 
   // user has pressed submit and entered the app
@@ -83,7 +63,6 @@ function App() {
     setIsIntro(false)
   }
 
-  
   // user has pressed start demo
   const startDemo = () => {
     console.log('start demo')
@@ -103,22 +82,26 @@ function App() {
     .then(()=>setIsStart(false))
   }
 
-
   // Activated after "Start wining" button is clicked
   const startIntro = () => {
     setIsStart(false)
   }
 
-  return (
+  const restToHomePage = () =>{
+    if (service.keyInLocalStorage('userData')) return
+    setIsIntro(true)
+    setIsStart(true)
+   }
+  
+   return (
     <Router>
-      <Header />
       {/* <Test/> */}
+      <Header restToHomePage={restToHomePage}/>
       <Switch>
         <Route exact path='/'>
           {isStart && <Starter onStartDemo={startDemo} onStartIntro={startIntro}/>}
-          {!isStart && isIntro && <Intro submitUserData={submitUserData} getUserData={getUserData}/>}
+          {!isStart && isIntro && <Intro submitUserData={submitUserData}/>}
           {!isIntro && <UserProfile  days={days} userData={userData} addData={addData}/> }
-          {/* {!isIntro && <Chart days={days}/>} */}
           {!isIntro && <GraphCarousel days={days}/>}
         </Route>
         <Route path='/blog'>
@@ -134,29 +117,3 @@ function App() {
 
 export default App;
 
-      {/* <Test arrayToCSV={arrayToCSV}/> */}
-
-
-// {/* <div className=''>
-// <Header />
-// {/* <Test arrayToCSV={arrayToCSV}/> */}
-
-      // {/* {!isIntro && <Motivation/>} */}
-      // {/* <AddDay days={days} onAdd={addData}/> */}
-      // {/* <ProfileOptions/> */}
-
-
-// {!isStart && isIntro && <Intro submitUserData={submitUserData} getUserData={getUserData}/>}
-// {/* <button onClick={()=>{service.clearLocalStorage()}}>
-//   CLEAR
-// </button> */}
-
-
-// {!isIntro && 
-// <div className="d-flex gap-2">
-  
-// </div>}
-
-
-// {/* {days && <div>{days.map((task, index) => (<h1 key={index} >{task.weight}</h1>))}</div>} */}
-// </div> */}

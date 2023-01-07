@@ -13,8 +13,14 @@ function clearLocalStorage(){
     localStorage.clear()
 }
 
+function keyInLocalStorage(key) {
+    return localStorage.hasOwnProperty(key)
+}
+    
+
 export default {
     loadFromStorage,
     saveToStorage,
-    clearLocalStorage
+    clearLocalStorage,
+    keyInLocalStorage
 }

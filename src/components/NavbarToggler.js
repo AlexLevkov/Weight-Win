@@ -16,7 +16,7 @@ function NavbarToggler() {
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end"
+              placement="start"
               style={{width:'30%'}}
             >
               {/* <Offcanvas.Header closeButton>
@@ -26,9 +26,9 @@ function NavbarToggler() {
               </Offcanvas.Header> */}
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1">
-                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="/"><i class="fa-solid fa-house"></i> Home</Link>
-                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="blog"><i class="fa-solid fa-book-open"></i> Blog</Link>
-                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="contact"><i class="fa-regular fa-id-card"></i> Contact</Link>
+                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="/"><i className="fa-solid fa-house"></i> Home</Link>
+                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="blog"><i className="fa-solid fa-book-open"></i> Blog</Link>
+                  <Link style={{textDecoration: 'none',color:'black',margin:'5px'}} to="contact"><i className="fa-regular fa-id-card"></i> Contact</Link>
                   {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}

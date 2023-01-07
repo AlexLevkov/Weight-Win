@@ -7,7 +7,7 @@ import { MultiStepForm } from "./multi_step_form/MultiStepForm.js";
 import { questions } from "./multi_step_form/Questions";
 
 
-const Intro = ({submitUserData,getUserData}) => {
+const Intro = ({submitUserData}) => {
   const [index, setIndex] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const totalPagesCount = questions?.length || 0;
@@ -27,7 +27,6 @@ const Intro = ({submitUserData,getUserData}) => {
 
   const nextButton = () => {
     if (index - 4) {
-      getUserData(pagesAnswers)
       setIndex(prevIndex => prevIndex + 1);
     } else {
       // clear the form on submit
@@ -38,7 +37,6 @@ const Intro = ({submitUserData,getUserData}) => {
      
         submitUserData(pagesAnswers);
         setSubmitted(true);
-        getUserData(pagesAnswers)
       }
 
     }
@@ -84,8 +82,8 @@ const Intro = ({submitUserData,getUserData}) => {
                   />
               </Card.Body>
               <Card.Footer className="d-flex justify-content-between">
-                <Button onClick={prevButton} disabled={index == 1}>Previous</Button>
-                <Button onClick={nextButton}>{index == totalPagesCount ? 'Submit' : 'Next'}</Button>
+                <Button className='btn-app' onClick={prevButton} disabled={index == 1}>Previous</Button>
+                <Button className='btn-app' onClick={nextButton}>{index == totalPagesCount ? 'Submit' : 'Next'}</Button>
               </Card.Footer>
             </Card>
         }
@@ -99,7 +97,7 @@ const Intro = ({submitUserData,getUserData}) => {
             Please make sure you fill all the required fields.
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={()=>{setToggle(!toggle)}}>
+            <Button className='btn-app' color="secondary" onClick={()=>{setToggle(!toggle)}}>
               Close
             </Button>
           </ModalFooter>

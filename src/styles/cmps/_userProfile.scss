@@ -15,9 +15,9 @@
   padding: 10px;
   border: 2px $clr1 solid;
   border-radius: 5px;
-  box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
-  -webkit-box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
-  -moz-box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.7);
+  box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.15);
+  -webkit-box-shadow: 3px 3px 2px 1px rgba(100,87,87,0.15);
+  -moz-box-shadow: 3px 3px 2px 1px rgba(100,87,870.15);
 }
 
 .days-to-goal{
@@ -38,3 +38,9 @@
     transform: scale(1.05);
   }
 }
+
+.btn-container{
+  .btn{
+    --bs-btn-font-size: 1.5rem!important;
+  }
+} 

@@ -18,6 +18,10 @@
   opacity: 1!important;
 }
 
+.carousel-indicators [data-bs-target]{
+  background-color: $clr1;
+}
+
 
 @media (max-width:768px){
   .graph-carousel-cmp{
